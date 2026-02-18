@@ -71,6 +71,13 @@ body {
   margin-top: 8px;
 }
 
+#founders .section-header h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
 /* Common Elements */
 a {
   text-decoration: none;
@@ -298,6 +305,15 @@ img {
   height: 90vh; /* Consistent height */
   overflow: hidden;
   margin-top: 60px; /* Offset for fixed header */
+}
+
+.slide img.contain-image {
+  object-fit: contain; /* Ensures the whole logo is visible */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a light bg if the logo is transparent */
+  width: 80%; /* Prevents logo from touching edges, optional */
+  height: 80%; /* Prevents logo from touching edges, optional */
+  left: 10%; /* Centers the 80% width image */
+  top: 10%; /* Centers the 80% height image */
 }
 
 .slide {
@@ -613,7 +629,8 @@ img {
 /* Language toggle container for Vision & Mission */
 .language-container {
   position: relative;
-  min-height: calc(200px + 1rem);
+ /* min-height: calc(200px + 1rem);*/
+  min-height: 380px;
 }
 
 .language-content {
@@ -1064,6 +1081,13 @@ img {
   z-index: 1;
 }
 
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .footer-logo h2 {
   color: var(--primary-color);
   margin-bottom: 20px;
@@ -1476,4 +1500,12 @@ body.menu-open {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+#about {
+  padding-bottom: 20px !important;
+}
+
+#founders {
+  padding-top: 20px !important;
 }
