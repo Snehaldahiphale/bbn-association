@@ -160,17 +160,18 @@ document.addEventListener('DOMContentLoaded', function() {
         counters.forEach(counter => {
             if (isInViewport(counter) && !counter.classList.contains('counted')) {
                 counter.classList.add('counted');
-                const target = +counter.innerText;
+                const target = +counter.innerText.replace(/,/g, '');
                 const count = 0;
                 const inc = target / speed;
+                let current = 0;
                 
                 const updateCount = () => {
-                    const currentValue = +counter.innerText;
-                    if (currentValue < target) {
-                        counter.innerText = Math.ceil(currentValue + inc);
+                    current += inc;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current).toLocaleString();
                         setTimeout(updateCount, 1);
                     } else {
-                        counter.innerText = target;
+                        counter.innerText = target.toLocaleString();
                     }
                 };
                 
