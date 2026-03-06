@@ -77,11 +77,6 @@ body {
   color: var(--primary-color);
   letter-spacing: 1px;
 }
-.section-header h4{
-  font-size:28px;
-  font-weight:600;
-  color:#2f4858;
-}
 
 /* Common Elements */
 a {
@@ -308,13 +303,9 @@ img {
 .slider {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 90vh; /* Consistent height */
   overflow: hidden;
-  margin-top: 0;
-}
-
-body {
-  padding-top: 60px; /* space for fixed header */
+  margin-top: 60px; /* Offset for fixed header */
 }
 
 .slide img.contain-image {
@@ -511,11 +502,6 @@ body {
   padding: 50px 0;
 }
 
-/* ===== About Section ===== */
-.about-section{
-  padding:40px 0;   /* reduce section gap */
-}
-
 /* ===== About Text ===== */
 .about-text {
   flex: 1;
@@ -524,11 +510,11 @@ body {
 
 .about-text h4 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: var(--secondary-color);
   position: relative;
   padding-bottom: 15px;
-  display: inline-block;
+  display: inline-block; /* centers underline with text */
 }
 
 .about-text h4:after {
@@ -543,7 +529,7 @@ body {
 }
 
 .about-text p {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 1.8;
   color: var(--text-color);
 }
@@ -554,7 +540,7 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   text-align: left;
-  display: inline-block;
+  display: inline-block; /* centers the list */
 }
 
 .about-text ul li {
@@ -567,23 +553,41 @@ body {
 .about-image {
   flex: 1;
   width: 100%;
-  max-width: 700px;
-  border-radius: 9px;
+  max-width: 600px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
+  
+  /* Laptop/Desktop View: Set a max-height so it doesn't scroll forever */
+  max-height: 500px; 
 }
 
 .about-image:hover {
-  transform: perspective(1000px) rotateY(0);
+  /* Removed the tilt/rotateY and kept it static */
+  transform: scale(1.02); /* Subtle zoom instead of a tilt */
   box-shadow: var(--hover-shadow);
 }
 
 .about-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without stretching */
   display: block;
 }
+
+/* ===== Mobile View Adjustments ===== */
+@media (max-width: 768px) {
+  .about-image {
+    max-height: none; /* Allows the image to be much bigger/taller on mobile */
+    max-width: 100%;  /* Ensures it takes full width */
+  }
+  
+  .about-image img {
+    height: auto; /* Maintains natural aspect ratio on mobile */
+  }
+}
+
 /* ===== Vision & Mission Section ===== */
 .vm-container {
   display: flex;
@@ -615,7 +619,7 @@ body {
 }
 
 .vm-box .section-header h2 {
-  font-size: 34px;
+  font-size: 28px;
   color: var(--secondary-color);
 }
 
@@ -623,11 +627,6 @@ body {
   margin-top: 20px;
   line-height: 1.8;
   color: var(--text-color);
-}
-.section-header h4{
-  font-size:28px;
-  font-weight:600;
-  color:#2f4858;
 }
 
 /* ===== Responsive Adjustments ===== */

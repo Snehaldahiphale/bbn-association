@@ -72,15 +72,10 @@ body {
 }
 
 #founders .section-header h3 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 1px;
-}
-.section-header h4{
-  font-size:28px;
-  font-weight:600;
-  color:#2f4858;
 }
 
 /* Common Elements */
@@ -219,7 +214,7 @@ img {
 }
 
 .section-header h3 {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--gray-color);
   margin-top: 20px;
   font-weight: 500;
@@ -308,25 +303,20 @@ img {
 .slider {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 90vh; /* Consistent height */
   overflow: hidden;
-  margin-top: 0;
-}
-
-body {
-  padding-top: 60px; /* space for fixed header */
+  margin-top: 60px; /* Offset for fixed header */
 }
 
 .slide img.contain-image {
   object-fit: contain; /* Ensures the whole logo is visible */
-  background-color: #ffffff;
-  filter: none; /* Optional: Adds a light bg if the logo is transparent */
-  width: 100%; /* Prevents logo from touching edges, optional */
-  height: 100%; /* Prevents logo from touching edges, optional */
-  left: 0%; /* Centers the 80% width image */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a light bg if the logo is transparent */
+  width: 80%; /* Prevents logo from touching edges, optional */
+  height: 80%; /* Prevents logo from touching edges, optional */
+  left: 10%; /* Centers the 80% width image */
   top: 10%; /* Centers the 80% height image */
-  padding: 5%;
 }
+
 .slide {
   position: absolute;
   width: 100%;
@@ -350,7 +340,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(90%) contrast(105%) saturate(110%);
+  filter: brightness(30%) contrast(105%) saturate(110%);
   z-index: -1; /* Place behind caption */
 }
 
@@ -397,29 +387,18 @@ body {
   margin-right: auto;
 }
 
-/* === RESPONSIVE FIX FOR HERO BUTTON ON MOBILE === */
-@media (max-width: 768px) {
-  .caption .btn-primary {
-    display: block;
-    margin: 25px auto 0; /* centers button below text */
-    font-size: 16px; /* adjusts size for smaller screen */
-    padding: 10px 25px; /* comfortable padding */
-    width: fit-content; /* keeps natural button width */
-  }
-
-  .caption h1 {
-    font-size: 2rem; /* smaller heading for mobile */
-  }
-
-  .caption h2 {
-    font-size: 1.2rem;
-  }
-
-  .caption p {
-    font-size: 1rem;
-  }
+/* === BUTTON === */
+.caption .btn-primary {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff8c42, #ff6a00);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.3);
+  transition: all 0.3s ease;
 }
-
 
 .caption .btn-primary:hover {
   background: linear-gradient(90deg, #ff6a00, #e45c00);
@@ -511,11 +490,6 @@ body {
   padding: 50px 0;
 }
 
-/* ===== About Section ===== */
-.about-section{
-  padding:40px 0;   /* reduce section gap */
-}
-
 /* ===== About Text ===== */
 .about-text {
   flex: 1;
@@ -524,11 +498,11 @@ body {
 
 .about-text h4 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: var(--secondary-color);
   position: relative;
   padding-bottom: 15px;
-  display: inline-block;
+  display: inline-block; /* centers underline with text */
 }
 
 .about-text h4:after {
@@ -543,7 +517,7 @@ body {
 }
 
 .about-text p {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 1.8;
   color: var(--text-color);
 }
@@ -554,7 +528,7 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   text-align: left;
-  display: inline-block;
+  display: inline-block; /* centers the list */
 }
 
 .about-text ul li {
@@ -567,11 +541,12 @@ body {
 .about-image {
   flex: 1;
   width: 100%;
-  max-width: 700px;
-  border-radius: 9px;
+  max-width: 600px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
+  transform: perspective(1000px) rotateY(-3deg);
 }
 
 .about-image:hover {
@@ -584,6 +559,7 @@ body {
   height: auto;
   display: block;
 }
+
 /* ===== Vision & Mission Section ===== */
 .vm-container {
   display: flex;
@@ -615,7 +591,7 @@ body {
 }
 
 .vm-box .section-header h2 {
-  font-size: 34px;
+  font-size: 28px;
   color: var(--secondary-color);
 }
 
@@ -623,11 +599,6 @@ body {
   margin-top: 20px;
   line-height: 1.8;
   color: var(--text-color);
-}
-.section-header h4{
-  font-size:28px;
-  font-weight:600;
-  color:#2f4858;
 }
 
 /* ===== Responsive Adjustments ===== */
@@ -1538,57 +1509,4 @@ body.menu-open {
 
 #founders {
   padding-top: 20px !important;
-}
-/* === FINAL MOBILE FIX FOR HERO CAPTION AND BUTTON === */
-@media (max-width: 768px) {
-  .caption {
-    position: relative; /* prevents clipping due to absolute position */
-    top: auto;
-    left: auto;
-    transform: none;
-    padding: 80px 20px 60px;
-    text-align: center;
-  }
-
-  .caption h1 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    margin-bottom: 15px;
-  }
-
-  .caption h2 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-
-  .caption p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-  }
-
-  .caption .btn-primary {
-    display: inline-block;
-    background: linear-gradient(90deg, #ff8c42, #ff6a00);
-    color: #fff;
-    padding: 12px 35px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(255, 106, 0, 0.3);
-    transition: all 0.3s ease;
-    margin: 0 auto;
-  }
-}
-/* === FIX ONLY THE LOGO SLIDE ON MOBILE === */
-@media (max-width: 768px) {
-  .logo-slide {
-    object-fit: contain !important; /* keep full logo visible */
-    background-color: #fff; /* optional white bg */
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
 }
