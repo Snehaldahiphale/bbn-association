@@ -13,6 +13,23 @@
   --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   --transition: all 0.4s ease;
 }
+.slide{
+  position: relative;
+  text-align: center;
+}
+
+.contain-image{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.caption{
+  position:absolute;
+  bottom:40px;   /* move button up/down */
+  left:50%;
+  transform:translateX(-50%);
+}
 
 * {
   margin: 0;
@@ -71,11 +88,11 @@ body {
   margin-top: 8px;
 }
 
-#founders .section-header h4 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #2f4858;
-  letter-spacing: 0.3px;
+#founders .section-header h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 1px;
 }
 .section-header h4{
   font-size:28px;
@@ -611,7 +628,7 @@ body {
 }
 
 .vm-box .section-header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .vm-box .section-header h2 {

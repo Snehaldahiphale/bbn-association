@@ -72,10 +72,13 @@ body {
 }
 
 #founders .section-header h4 {
-  font-size: 28px;
+.heading-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
   font-weight: 600;
-  color: #2f4858;
-  letter-spacing: 0.3px;
+  line-height: 1.35;
+  color: #2f4a5a;
+}
 }
 .section-header h4{
   font-size:28px;

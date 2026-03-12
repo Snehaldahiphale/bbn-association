@@ -76,16 +76,34 @@
           <p></p>
         </div>
       </div>
+<style>
+  .slide {
+    display: flex;
+    flex-direction: column; /* This forces children to stack vertically */
+    align-items: center;    /* This centers the image and button horizontally */
+    text-align: center;
+    gap: 20px;              /* Adds space between the image and the button */
+  }
+
+  .contain-image {
+    max-width: 100%;        /* Ensures the image doesn't overflow */
+    height: auto;
+  }
+</style>
 
 <div class="slide">
-  <img class="contain-image" src="assets\images\logo C2C (2).jpg" alt="Social Welfare" class="logo-slide">
+  <img class="contain-image" src="assets/images/logo C2C (2).jpg" alt="Social Welfare">
+  
   <div class="caption">
-    
-    <h2></h2>
-    <p></p>
+    <a href="https://rzp.io/rzp/XIR8v6pQ" 
+       class="btn-primary" 
+       style="background-color: #ff6b2b; color: white; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.3s;"
+       onmouseover="this.style.backgroundColor='#e55d1d'" 
+       onmouseout="this.style.backgroundColor='#ff6b2b'">
+       KNOW MORE
+    </a>
   </div>
 </div>
-
       <div class="slide">
         <img src="assets\images\WhatsApp Image 2026-02-17 at 12.15.16 PM (1).jpeg" alt="Youth Entrepreneurship" />
         <div class="caption">
@@ -93,6 +111,8 @@
         </div>
       </div>
       </div>
+
+
       </div>
     </section>
 
@@ -103,7 +123,7 @@
     <div class="about-content">
       <div class="about-text">
         <ul>
-          <h4>A Network Built on Trust, Growth, and Giving.</h4>
+           <h4>A Network Built on Trust, Growth, and Giving.</h4>
           <li>We are a Section 8 Registered Non-Profit Organisation recognised by the Ministry of Commerce (MCA).</li>
           <li>Darpan Registration</li>
           <li>12A & 80G Registration</li>
@@ -123,11 +143,10 @@
     
  <section id="founders" class="section bg-light">
   <div class="container">
-    
     <div class="section-header">
-      <h4>Founder Visionaries Behind Our Mission</h4>
+      <h4>"Founder Visionaries Behind Our Mission"</h4>
       
-      <h4>Dreamers. Doers. Directors.</h4>
+      <h4>"Dreamers. Doers. Directors."</h4>
     </div>
 
     <div class="founders-container">
@@ -173,7 +192,7 @@
                 </p>
               </div>
               <div class="language-content marathi-content hidden">
-                <h3>दृष्टीकोन </h3>
+                <h3>दृष्टीकोन</h3>
                 <p>
                   समाजात एकात्मता, निष्ठा आणि शाश्वत प्रगतीचा आग्रह धरणाऱ्या
                   ब्राह्मण समाजाच्या उन्नतीसाठी आम्ही कटिबद्ध आहोत — जिथे सशक्त
@@ -365,19 +384,19 @@
       <div class="container">
         <div class="section-header">
           <h4>Gallery</h4>
-          <h3>Photos</h3> 
+          <h3>Photos</h3>
         </div>
         <div class="gallery-content">
           <div id="photos" class="tab-content active">
             <div class="gallery-grid">
               <div class="gallery-item">
-                <img src="assets\images\WhatsApp Image 2026-02-17 at 12.15.17 PM.jpeg" alt="BBN Event" />
+                <img src="assets\images\WhatsApp Image 2026-02-17 at 12.15.16 PM.jpeg" alt="BBN Event" />
               </div>
               <div class="gallery-item">
                 <img src="assets\images\WhatsApp Image 2026-02-19 at 11.01.27 AM.jpeg" alt="BBN Event" />
               </div>
               <div class="gallery-item">
-                <img src= "assets\images\WhatsApp Image 2026-02-17 at 12.15.16 PM.jpeg"alt="BBN Event" />
+                <img src="assets\images\WhatsApp Image 2026-02-17 at 12.15.17 PM.jpeg" alt="BBN Event" />
               </div>
               <div class="gallery-item">
                 <img src="assets/images/7.jpg" alt="BBN Blood Donation Camp" />
@@ -409,7 +428,7 @@
       <div class="testimonial-item">
         <div class="testimonial-content">
           <p>
-            “Through BBNA, I connected with professionals who value collaboration, trust, and giving back. It’s more than an association—it’s a caring community built on strong values.”
+            "Through BBNA, I connected with professionals who believe in collaboration, trust, and giving back to society. BBNA is not just an association - it’s a shield of care and truly feels like a community built on trust and values."
           </p>
           <div class="testimonial-author">
             <h4>Anjali Bhide</h4>
