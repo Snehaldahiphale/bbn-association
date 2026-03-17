@@ -30,65 +30,39 @@ body {
   color: var(--dark-color);
   background-color: var(--light-color);
 }
-/* === Founder Visionaries Section === */
+/* === Updated Founder Section Header === */
 
-.founders-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.founder-card {
-  text-align: center;
-  max-width: 280px;
-}
-
-.founder-card img {
-  width: 220px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  margin-bottom: 15px;
-}
-
-.founder-card h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 5px;
-}
-
-.founder-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* section heading */
-
-.section-header h3 {
+#founders .section-header h3 {
   font-size: 24px;
-  font-weight: 600;
-  color: var(--primary-color);
+  font-weight: 700;
+  /* Using your secondary color to match the 'About' style in the image */
+  color: var(--secondary-color); 
   letter-spacing: 1px;
-  text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+  display: inline-block; /* Crucial: centers the underline relative to text */
 }
 
+/* This creates the orange underline */
+#founders .section-header h3:after {
+  content: "";
+  position: absolute;
+  width: 60px; /* Length of the orange line */
+  height: 3px; /* Thickness of the line */
+  background: var(--primary-gradient);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ensure the subtitle has proper spacing */
 .section-header p {
-  font-size: 1.2rem;    /* Increased size */
-  font-weight: 700;     /* Bold */
   font-style: italic;
-  color: #2f4858;       /* Your secondary color */
-  margin-top: 5px;      /* Slight gap from the line above */
-  text-align: center;
-  letter-spacing: 0.5px; /* Makes bold text more readable */
-  line-height: 1.4;
+  color: #777;
+  margin-top: 10px; 
+  display: block;
 }
-
-
 /* Common Elements */
 a {
   text-decoration: none;
@@ -204,8 +178,9 @@ img {
 }
 
 .section-header h2 {
-  font-size: 28px;
+  font-size: 36px;
   color: var(--secondary-color);
+  text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 700;
   position: relative;

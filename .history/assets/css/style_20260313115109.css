@@ -204,8 +204,9 @@ img {
 }
 
 .section-header h2 {
-  font-size: 28px;
+  font-size: 36px;
   color: var(--secondary-color);
+  text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 700;
   position: relative;

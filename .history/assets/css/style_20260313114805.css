@@ -68,13 +68,42 @@ body {
 
 /* section heading */
 
+/* === Updated Section Header Styles === */
+
 .section-header h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--primary-color);
-  letter-spacing: 1px;
+  font-size: 26px; /* Slightly bigger for better visibility */
+  font-weight: 600; /* Extra bold for that "darkness" look */
+  color: #1a365d;   /* Deeper Navy Blue for better contrast */
+  letter-spacing: 0.5px;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block; /* Essential for the underline to center */
+  padding-bottom: 15px;
+  line-height: 1.2;
+}
+
+/* The Underline - matches the vibrant orange in your screenshot */
+.section-header h3::after {
+  content: "";
+  position: absolute;
+  width: 55px;         /* Length of the line */
+  height: 4px;         /* Thickness of the line */
+  background-color: #ff6b00; /* Solid, vibrant orange */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;  /* Softens the edges of the line slightly */
+}
+
+/* The Subtitle (p tag) if you have one below it */
+.section-header p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #2d3748;      /* Dark slate gray */
+  margin-top: 10px;
+  text-align: center;
 }
 
 .section-header p {
@@ -204,8 +233,9 @@ img {
 }
 
 .section-header h2 {
-  font-size: 28px;
+  font-size: 36px;
   color: var(--secondary-color);
+  text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 700;
   position: relative;

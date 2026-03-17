@@ -31,7 +31,6 @@ body {
   background-color: var(--light-color);
 }
 /* === Founder Visionaries Section === */
-
 .founders-container {
   display: flex;
   flex-wrap: wrap;
@@ -66,28 +65,23 @@ body {
   color: #555;
 }
 
-/* section heading */
-
-.section-header h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--primary-color);
-  letter-spacing: 1px;
-  text-align: center;
-  margin-bottom: 5px;
-}
-
 .section-header p {
-  font-size: 1.2rem;    /* Increased size */
-  font-weight: 700;     /* Bold */
   font-style: italic;
-  color: #2f4858;       /* Your secondary color */
-  margin-top: 5px;      /* Slight gap from the line above */
-  text-align: center;
-  letter-spacing: 0.5px; /* Makes bold text more readable */
-  line-height: 1.4;
+  color: #777;
+  margin-top: 8px;
 }
 
+#founders .section-header h4 {
+  font-size: 36px;
+  font-weight: 600 (SemiBold);
+  color: #2f4858;;
+  letter-spacing: 1px;
+}
+.section-header h4{
+  font-size:28px;
+  font-weight:600;
+  color:#2f4858;
+}
 
 /* Common Elements */
 a {
@@ -204,8 +198,9 @@ img {
 }
 
 .section-header h2 {
-  font-size: 28px;
+  font-size: 36px;
   color: var(--secondary-color);
+  text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 700;
   position: relative;
@@ -313,20 +308,25 @@ img {
 .slider {
   position: relative;
   width: 100%;
-  height: 90vh; /* Consistent height */
+  height: 90vh;
   overflow: hidden;
-  margin-top: 60px; /* Offset for fixed header */
+  margin-top: 0;
+}
+
+body {
+  padding-top: 60px; /* space for fixed header */
 }
 
 .slide img.contain-image {
   object-fit: contain; /* Ensures the whole logo is visible */
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a light bg if the logo is transparent */
-  width: 80%; /* Prevents logo from touching edges, optional */
-  height: 80%; /* Prevents logo from touching edges, optional */
-  left: 10%; /* Centers the 80% width image */
+  background-color: #ffffff;
+  filter: none; /* Optional: Adds a light bg if the logo is transparent */
+  width: 100%; /* Prevents logo from touching edges, optional */
+  height: 100%; /* Prevents logo from touching edges, optional */
+  left: 0%; /* Centers the 80% width image */
   top: 10%; /* Centers the 80% height image */
+  padding: 5%;
 }
-
 .slide {
   position: absolute;
   width: 100%;
@@ -397,18 +397,29 @@ img {
   margin-right: auto;
 }
 
-/* === BUTTON === */
-.caption .btn-primary {
-  display: inline-block;
-  background: linear-gradient(90deg, #ff8c42, #ff6a00);
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.3);
-  transition: all 0.3s ease;
+/* === RESPONSIVE FIX FOR HERO BUTTON ON MOBILE === */
+@media (max-width: 768px) {
+  .caption .btn-primary {
+    display: block;
+    margin: 25px auto 0; /* centers button below text */
+    font-size: 16px; /* adjusts size for smaller screen */
+    padding: 10px 25px; /* comfortable padding */
+    width: fit-content; /* keeps natural button width */
+  }
+
+  .caption h1 {
+    font-size: 2rem; /* smaller heading for mobile */
+  }
+
+  .caption h2 {
+    font-size: 1.2rem;
+  }
+
+  .caption p {
+    font-size: 1rem;
+  }
 }
+
 
 .caption .btn-primary:hover {
   background: linear-gradient(90deg, #ff6a00, #e45c00);
@@ -496,8 +507,13 @@ img {
   flex-direction: column; /* stack items vertically */
   align-items: center; /* center horizontally */
   text-align: center; /* center all text */
-  gap: 15px;
-  padding: 5px 0;
+  gap: 30px;
+  padding: 50px 0;
+}
+
+/* ===== About Section ===== */
+.about-section{
+  padding:40px 0;   /* reduce section gap */
 }
 
 /* ===== About Text ===== */
@@ -508,11 +524,11 @@ img {
 
 .about-text h4 {
   font-size: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: var(--secondary-color);
   position: relative;
   padding-bottom: 15px;
-  display: inline-block; /* centers underline with text */
+  display: inline-block;
 }
 
 .about-text h4:after {
@@ -527,7 +543,7 @@ img {
 }
 
 .about-text p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 1.8;
   color: var(--text-color);
 }
@@ -538,7 +554,7 @@ img {
   margin: 0 auto;
   padding-left: 20px;
   text-align: left;
-  display: inline-block; /* centers the list */
+  display: inline-block;
 }
 
 .about-text ul li {
@@ -551,12 +567,11 @@ img {
 .about-image {
   flex: 1;
   width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
+  max-width: 700px;
+  border-radius: 9px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
-  
 }
 
 .about-image:hover {
@@ -569,7 +584,6 @@ img {
   height: auto;
   display: block;
 }
-
 /* ===== Vision & Mission Section ===== */
 .vm-container {
   display: flex;
@@ -597,11 +611,11 @@ img {
 }
 
 .vm-box .section-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .vm-box .section-header h2 {
-  font-size: 28px;
+  font-size: 34px;
   color: var(--secondary-color);
 }
 
@@ -609,6 +623,11 @@ img {
   margin-top: 20px;
   line-height: 1.8;
   color: var(--text-color);
+}
+.section-header h4{
+  font-size:28px;
+  font-weight:600;
+  color:#2f4858;
 }
 
 /* ===== Responsive Adjustments ===== */
@@ -1519,4 +1538,56 @@ body.menu-open {
 
 #founders {
   padding-top: 20px !important;
+}
+/* === FINAL MOBILE FIX FOR HERO CAPTION AND BUTTON === */
+@media (max-width: 768px) {
+  /* Ensure the main slider container can expand */
+  .slider {
+    height: auto !important; 
+    min-height: 100vh; /* Adjust this if you want it shorter */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ensure the individual slide allows content to push the height */
+  .slide {
+    position: relative; /* Change from absolute to allow content flow */
+    opacity: 0;
+    display: none; /* Hide non-active slides */
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 50px; /* Space for the button */
+  }
+
+  .slide.active {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .caption {
+    position: relative; 
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 100px 20px 40px; /* Added top padding for header clearance */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Force the button to stay within the flow */
+  .caption .btn-primary {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto 0; 
+    z-index: 10;
+  }
+
+  /* Ensure background image covers the new expanded height */
+  .slide img {
+    height: 100%;
+    min-height: 100%;
+  }
 }

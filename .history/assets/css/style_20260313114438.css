@@ -70,7 +70,7 @@ body {
 
 .section-header h3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 1px;
   text-align: center;
@@ -78,14 +78,11 @@ body {
 }
 
 .section-header p {
-  font-size: 1.2rem;    /* Increased size */
-  font-weight: 700;     /* Bold */
   font-style: italic;
-  color: #2f4858;       /* Your secondary color */
-  margin-top: 5px;      /* Slight gap from the line above */
+  font-weight: 700; /* This makes the text bold */
+  color: #2f4858;
+  margin-top: 0;
   text-align: center;
-  letter-spacing: 0.5px; /* Makes bold text more readable */
-  line-height: 1.4;
 }
 
 
@@ -204,8 +201,9 @@ img {
 }
 
 .section-header h2 {
-  font-size: 28px;
+  font-size: 36px;
   color: var(--secondary-color);
+  text-transform: uppercase;
   margin-bottom: 15px;
   font-weight: 700;
   position: relative;
