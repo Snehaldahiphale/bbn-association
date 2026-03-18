@@ -1586,3 +1586,15 @@ body.menu-open {
     min-height: 100%;
   }
 }
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .slider {
+    height: 75vh; /* reduce height */
+  }
+
+  .slide img.contain-image {
+    width: 90%;
+    height: auto; /* remove full height forcing */
+    max-height: 70vh;
+  }
+}

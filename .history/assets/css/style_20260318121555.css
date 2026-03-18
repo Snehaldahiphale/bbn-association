@@ -241,8 +241,9 @@ img {
   z-index: 1000;
   padding: 15px 0;
   transition: var(--transition);
-  /* backdrop-filter: blur(1px); */
+  /* backdrop-filter: blur(1px); */ /* Removed blur effect */
 }
+
 
 #header .container {
   display: flex;
@@ -308,7 +309,6 @@ img {
   color: var(--primary-color);
   z-index: 1001;
 }
-
 /* === HERO SLIDER === */
 
 .slider {
@@ -317,7 +317,7 @@ img {
   height: 90vh;
   overflow: hidden;
   margin-top: 60px;
-  background: #ffffff;
+  background: #ffffff; /* full white background */
 }
 
 /* Slide */
@@ -337,22 +337,17 @@ img {
   z-index: 1;
 }
 
-/* 🔥 FIXED LOGO IMAGE (ONLY CHANGE HERE) */
+/* Logo image */
 .slide img.contain-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* keeps full logo visible */
-  object-position: center;
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  background: #ffffff; /* white instead of transparent box */
 }
 
-/* Background images for other slides */
-.slide img:not(.contain-image) {
+/* Normal slider images */
+.slide img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -360,27 +355,27 @@ img {
   z-index: -1;
 }
 
-/* === CAPTION TEXT === */
+/* === CAPTION TEXT (UPDATED FOR CENTERING) === */
 .caption {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #ffffff;
+  top: 50%;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center vertically and horizontally */
+  color: #ffffff;;
   width: 90%;
-  max-width: 900px;
-  text-align: center;
+  max-width: 900px; /* Prevent text from becoming too wide */
+  text-align: center; /* Center text alignment */
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 1s ease;
   z-index: 2;
 }
 
 .caption h1 {
-  font-size: 3rem;
+  font-size: 3rem; /* Responsive sizing handled in media queries */
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #ffffff;;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -388,7 +383,7 @@ img {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #ffffff;;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -396,7 +391,7 @@ img {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: #ffffff;;
   opacity: 0.95;
   max-width: 800px;
   margin-left: auto;
@@ -919,7 +914,7 @@ img {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 900px;
 }
 
 .testimonial-item {

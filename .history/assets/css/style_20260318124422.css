@@ -1586,3 +1586,20 @@ body.menu-open {
     min-height: 100%;
   }
 }
+@media (max-width: 768px) {
+  .slider {
+    height: auto; /* 🔥 remove fixed height */
+    padding: 40px 0; /* add balanced spacing */
+  }
+
+  .slide {
+    position: relative; /* remove absolute stacking issue */
+    height: auto;
+  }
+
+  .slide img.contain-image {
+    width: 85%;
+    height: auto;
+    max-height: none; /* remove restriction */
+  }
+}
