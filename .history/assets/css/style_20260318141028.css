@@ -587,12 +587,14 @@ img {
   flex-wrap: wrap; /* make responsive on smaller screens */
   justify-content: center;
 }
-
+#mission {
+  padding-top: 30px;
+}
 
 .vm-box {
   flex: 1 1 45%;
   background-color: var(--white-color);
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
   text-align: center;

@@ -201,10 +201,6 @@ img {
   text-align: center;
   margin-bottom: 20px;
   position: relative;
-  
-}
-#about {
-  padding-top: 20px;
 }
 
 .section-header h2 {
@@ -588,11 +584,10 @@ img {
   justify-content: center;
 }
 
-
 .vm-box {
   flex: 1 1 45%;
   background-color: var(--white-color);
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
   text-align: center;

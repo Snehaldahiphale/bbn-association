@@ -592,7 +592,7 @@ img {
 .vm-box {
   flex: 1 1 45%;
   background-color: var(--white-color);
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
   text-align: center;
@@ -617,7 +617,7 @@ img {
 }
 
 .vm-box p {
-  margin-top: 20px;
+  margin-top: 10px;
   line-height: 1.8;
   color: var(--text-color);
 }

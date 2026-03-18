@@ -583,16 +583,15 @@ img {
 /* ===== Vision & Mission Section ===== */
 .vm-container {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap; /* make responsive on smaller screens */
   justify-content: center;
 }
 
-
 .vm-box {
   flex: 1 1 45%;
   background-color: var(--white-color);
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
   text-align: center;
